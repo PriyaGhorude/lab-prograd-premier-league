@@ -12,7 +12,7 @@ describe("Create a Manager array and return it - createManager", function() {
     let actualResult = createManager("Alex Ferguson", 78, "Manchester FC", 27);
 
     let expectedResult = ["Alex Ferguson", 78, "Manchester FC", 27];
-
+//not understand
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -43,7 +43,7 @@ describe("Create a team formation object and return it - createFormation", funct
     };
 
     let actualResult = createFormation([2, 3]);
-
+    //not understood what to return
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -51,7 +51,7 @@ describe("Create a team formation object and return it - createFormation", funct
     let expectedResult = null;
 
     let actualResult = createFormation([]);
-
+   
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -61,9 +61,9 @@ describe("Create a team formation object and return it - createFormation", funct
       midfield: 3,
       forward: 1
     };
-
+ //not understood what to return variable or array
     let actualResult = createFormation([2, 3, 1]);
-
+   
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -73,7 +73,7 @@ describe("Create a team formation object and return it - createFormation", funct
       midfield: 4,
       forward: 5
     };
-
+ //not understood what to return variable or array
     let actualResult = createFormation([2, 4, 5]);
 
     expect(actualResult).toEqual(expectedResult);
@@ -111,7 +111,7 @@ describe("Filter player details based on the debut year -filterByDebut", functio
     ];
 
     let actualResult = filterByDebut(2005);
-
+    //return array or comparison
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -310,6 +310,7 @@ describe("Filter players based on  position - filterByPosition", function() {
 
   it("Validate the number of players with same position", function() {
     expect(filterByPosition("Forward").length).toEqual(13);
+    //not getting
   });
 });
 
