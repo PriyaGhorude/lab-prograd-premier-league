@@ -628,11 +628,98 @@ function filterByPosition(position)
 
 //Progression 5 - Filter players that have won ______ award
 
+function filterByPosition(award)
+{ 
+  var positionArray = [];
+   for (let i= 0;i<players.length;i++)
+   {
+     for(let j=0;j<players[i].awards.length;j++)
+     {
+       if(players[i].awards[j].name == award)
+       {
+         positionArray.push(players[i]);
+       }
+     }
+   }
+  return positionArray;
+}
+
 //Progression 6 - Filter players that won ______ award ____ times
+var filterByAwardxTimes = (awardsName,NoOfTimes) =>
+{
+  var filter_awardxTimes = [];
+  if(NoOfTimes == 0)
+  {
+    return filter_awardxTimes;
+  }
+ else
+ {
+    for (let i= 0;i<players.length;i++)
+    {
+      var nCount =0;
+      for(let j=0;j<players[i].awards.length;j++)
+      {
+        if(players[i].awards[j].name == awardsName)
+        {
+          filter_awardxTimes.push(players[i]);
+          nCount ++;
+        }
+      }
+      if(nCount == 0)
+      {
+        return filter_awardxTimes;
+      }
+      else
+      {
+        if(nCount == NoOfTimes)
+        {
+          return filter_awardxTimes;
+        }
+      }
+    }
+ }
+}
 
 //Progression 7 - Filter players that won ______ award and belong to ______ country
+function filterByAwardxCountry(awardsName,country)
+{
+  var filter_Country = [];
+  for (let i= 0;i<players.length;i++)
+  {
+    for(let j=0;j<players[i].awards.length;j++)
+    {
+      if(players[i].awards[j].name == awardsName && players[i].country == country)
+      {
+        filter_Country.push(players[i]);
+      }
+    }
+  }
+  //console.log(filter_awards);
+  return filter_Country;
+}
 
 //Progression 8 - Filter players that won atleast ______ awards, belong to ______ team and are younger than ____
+function filterByNoOfAwardsxTeamxAge(awardsName,team,age)
+{
+  var filterAwardsxTeamxAge = [];
+  for (let i= 0;i<players.length;i++)
+  {
+    for(let j=0;j<players[i].awards.length;j++)
+    {
+      if(players[i].awards[j].name == awardsName && players[i].team == team && players[i].age < age)
+      {
+        filterAwardsxTeamxAge.push(players[i]);
+      }
+    }
+  }
+  if(filterAwardsxTeamxAge.length > 0)
+  {
+    return filterAwardsxTeamxAge;
+  }
+  else{
+    return filterAwardsxTeamxAge;
+  }
+}
 
 //Progression 9 - Sort players in descending order of their age
 
