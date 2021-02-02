@@ -712,15 +712,8 @@ function filterByNoOfAwardsxTeamxAge(awardsName,team,age)
       }
     }
   }
-  if(filterAwardsxTeamxAge.length > 0)
-  {
-    return filterAwardsxTeamxAge;
-  }
-  else{
-    return filterAwardsxTeamxAge;
-  }
+  return filterAwardsxTeamxAge;
 }
-
 //Progression 9 - Sort players in descending order of their age
 
 //Progression 10 - Sort players beloging to _____ team in descending order of awards won
